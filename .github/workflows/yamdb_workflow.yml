@@ -1,4 +1,4 @@
-name: yamdb workflow
+name: yamdb_workflow
 
 on: [push]
 
@@ -55,7 +55,7 @@ jobs:
         username: ${{ secrets.SSH_USERNAME }}
         key: ${{ secrets.SSH_KEY }}
         script: |
-            sudo docker pull ${{ secrets.DOCKER_USERNAME }}/${{ secrets.DOCKER_REPO_NAME }}:latest
+            sudo docker pull ${{ secrets.DOCKER_USERNAME }}/${{ secrets.DOCKER_REPO_NAME }}
             sudo docker-compose stop
             sudo docker-compose rm web
             touch .env

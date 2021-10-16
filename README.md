@@ -1,7 +1,7 @@
 # YaMDB API
 **_Учебный проект_**
 
-![yamdb workflow](https://github.com/evi1ghost/yamdb_final/actions/workflows/yamdb_workflow/badge.svg)
+![[yamdb workflow](https://github.com/evi1ghost/yamdb_final/workflows/yamdb_workflow/badge.svg)](https://github.com/evi1ghost/yamdb_final/actions)
 
 ### Краткое описание:
 API для сервиса отзывов о различных произведениях (фильмы, музыка и др.). Сами произведения в YaMDb не хранятся. Произведения делятся на категории. Каждому произведению может быть присвоен жанр. Пользователи создают отзывы на произведения и выставляют оценки (от 1 до 10). Средняя оценка вычисляется автоматически.
