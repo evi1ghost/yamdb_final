@@ -1,8 +1,7 @@
-from django.shortcuts import get_object_or_404
 from django.db.models import Avg
+from django.shortcuts import get_object_or_404
 from django_filters.rest_framework import DjangoFilterBackend
-from rest_framework import filters, permissions, status, viewsets
-from rest_framework import mixins
+from rest_framework import filters, mixins, permissions, status, viewsets
 from rest_framework.decorators import action
 from rest_framework.permissions import IsAuthenticatedOrReadOnly
 from rest_framework.response import Response
@@ -10,25 +9,16 @@ from rest_framework.views import APIView
 from rest_framework_simplejwt.tokens import AccessToken
 
 from .filters import TitlesFilter
-from .models import Genre, Review, Category, Title, User
-from .permissions import IsAdmin
-from .permissions import (
-    IsAdminOrReadOnly, IsAuthorOrNotSimpleUserReadOnly
-)
-from .serializers import (
-    ReviewSerializer, CommentSerializer,
-    GenreSerializer, CategorySerializer,
-    TitleSerializerOnePost, TitleSerializerReadOnly
-)
-from .serializers import (
-    UserCreateSerializer, MyTokenObtainSerializer,
-    UserAdminSerializer
-)
-from .utils import (
-    send_confirmation_code,
-    account_activation_token,
-    set_username
-)
+from .models import Category, Genre, Review, Title, User
+from .permissions import (IsAdmin, IsAdminOrReadOnly,
+                          IsAuthorOrNotSimpleUserReadOnly)
+from .serializers import (CategorySerializer, CommentSerializer,
+                          GenreSerializer, MyTokenObtainSerializer,
+                          ReviewSerializer, TitleSerializerOnePost,
+                          TitleSerializerReadOnly, UserAdminSerializer,
+                          UserCreateSerializer)
+from .utils import (account_activation_token, send_confirmation_code,
+                    set_username)
 
 
 class CreateUserByEmail(APIView):

@@ -1,12 +1,10 @@
-from django.urls import path, include
+from django.urls import include, path
 from django.views.decorators.csrf import csrf_exempt
 from rest_framework.routers import DefaultRouter
 
-from .views import (
-    ReviewViewSet, GenreViewSet,
-    CategoryViewSet, CommentViewSet, TitleViewSet,
-    UserAdminViewSet, CreateUserByEmail, TokenObtain
-)
+from .views import (CategoryViewSet, CommentViewSet, CreateUserByEmail,
+                    GenreViewSet, ReviewViewSet, TitleViewSet, TokenObtain,
+                    UserAdminViewSet)
 
 router_1 = DefaultRouter()
 
