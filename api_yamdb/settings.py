@@ -9,7 +9,7 @@ if not SECRET_KEY:
 
 DEBUG = False
 
-ALLOWED_HOSTS = ['127.0.0.1', 'localhost', '62.84.117.224']
+ALLOWED_HOSTS = ['62.84.117.224', 'localhost']
 
 
 INSTALLED_APPS = [
